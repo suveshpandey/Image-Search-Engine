@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes slideIn {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .slide-in {
+            animation: slideIn 1s ease-in-out forwards;
+        }
+    </style>
+    <title>Image Search Engine</title>
+</head>
+<body class="bg-gray-900 text-white flex flex-col justify-center items-center min-h-screen">
+    <h1 class="animate-pulse text-center text-[35px] font-bold font-serif mb-[20px] text-blue-400 px-[10px]">Image Search Engine</h1>
+    <form id="search-form" class="sm:w-[60%] w-[90%] sm:h-[60px] h-[40px] border-[2px] border-blue-600 border-opacity-55 mx-auto bg-[grey] bg-opacity-20 rounded-[10px] flex z-10">
+        <input type="text" id="search-box" class="h-[100%] pl-[20px] sm:text-[18px] text-[15px] bg-[#0a0a28] bg-opacity-10 w-[70%] outline-none opacity-40" placeholder="Search anything here...">
+        <button id="searchBtn" class="bg-gray-500 w-[30%] rounded-[10px] rounded-l-none sm:text-[18px] text-[15px] font-semibold text-[#f3d6d6] hover:bg-[#14c33a] transition-colors duration-500">Search</button>
+    </form>
+    <div id="intro-section" class="w-full h-full absolute top-0 left-0 flex flex-col items-center justify-center bg-gray-900 px-[10px]">
+        <div class="animate-pulse text-center text-[35px] font-semibold text-blue-400 mb-[10px]">Welcome to Image Search Engine!</div>
+        <p class="text-center text-[18px] text-[#B0B0B0]">Use the search box above to find amazing images.</p>
+        <p class="text-center text-[18px] text-[#B0B0B0] opacity-40">Please enter a keyword related to the image.</p>
+    </div>
+    <div id="search-result" class="grid sm:grid-cols-3 w-[90%] border-[2px] min-h-screen mt-[20px] rounded-md p-[10px] grid-cols-[2]"></div>
+    <button id="show-more-btn" class="bg-blue-600 py-[10px] px-[20px] rounded-[5px] mt-[10px] cursor-pointer hidden mb-[20px] hover:bg-blue-800 duration-300">Show more</button>
+    <!-- <button id="show-less-btn" class="bg-gray-600 py-[10px] px-[20px] rounded-[5px] mt-[10px] cursor-pointer hidden mb-[20px] hover:bg-blue-800 duration-300">Show less</button> -->
+    <footer class="w-full text-center py-4 bg-[#1E1E1E] text-[#B0B0B0] mt-[10px] rounded-md">
+        &copy; 2024 Suvesh Pandey | All rights reserved.
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
